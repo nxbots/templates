@@ -2,7 +2,7 @@
 using namespace std;
 
 static const int mx = 1e6+20;
-bool isPrime[mx];
+bitset<mx> isPrime;
 vector<int> prime;
 
 void genPrime(int n) {
