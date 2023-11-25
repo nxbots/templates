@@ -8,10 +8,10 @@ struct ST {
     ST() {
         memset(t, 0, sizeof t);
     }
-    inline ll combine(ll a, ll b) {
+    inline ll combine(ll a, ll b) { //change here
         return a+b;
     }
-    inline void pull(int node) {
+    inline void pull(int node) { //change here
         t[node] = t[lc]+t[rc];
     }
     void build(int node, int b, int e) {
@@ -36,7 +36,7 @@ struct ST {
         pull(node);
     }
     ll query(int node, int b, int e, int i, int j) {
-        if(j < b || i > e) return 0;
+        if(j < b || i > e) return 0; //change here
         if(b >= i && e <= j) return t[node];
         int mid = (b+e)>>1;
         return combine(query(lc, b, mid, i, j),
